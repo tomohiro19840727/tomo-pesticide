@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import Pesticide from './components/Pesticide';
+import Home from './components/Home';
+import Header from './components/Header';
+import Seed from './components/Seed';
+import Plant from './components/Plant';
+import Calculation from './components/Calculation';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+    <Header />
+      <Routes>
+
+            <Route path="/" element={<Home />} />
+            <Route path="/seeds" element={<Seed />} />
+            <Route path="/plant" element={<Plant />} />
+            <Route path="/pesticide" element={<Pesticide />} />
+            <Route path="/calculation" element={<Calculation />} />
+          </Routes>
+      </Router>
+    </>
   );
 }
 
