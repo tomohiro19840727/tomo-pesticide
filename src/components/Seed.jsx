@@ -7,6 +7,16 @@ const Seed = () => {
       <div className="mx-auto max-w-screen-lg px-4 md:px-8">
         <div className="mb-6 sm:mb-10 lg:mb-16">
           <h2 className="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">種子在庫</h2>
+          <div className="flex justify-center gap-4 mt-6 flex-wrap">
+              <button className="px-6 py-2 text-lg font-semibold text-white bg-indigo-500 rounded-lg transition duration-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">全て</button>
+              <button className="px-6 py-2 text-lg font-semibold text-white bg-indigo-500 rounded-lg transition duration-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">水稲</button>
+              <button className="px-6 py-2 text-lg font-semibold text-white bg-indigo-500 rounded-lg transition duration-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">黒大豆</button>
+              <button className="px-6 py-2 text-lg font-semibold text-white bg-indigo-500 rounded-lg transition duration-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">秋麦</button>
+              <button className="px-6 py-2 text-lg font-semibold text-white bg-indigo-500 rounded-lg transition duration-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">春麦</button>
+              <button className="px-6 py-2 text-lg font-semibold text-white bg-indigo-500 rounded-lg transition duration-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">小麦</button>
+              <button className="px-6 py-2 text-lg font-semibold text-white bg-indigo-500 rounded-lg transition duration-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">黒豆</button>
+              <button className="px-6 py-2 text-lg font-semibold text-white bg-indigo-500 rounded-lg transition duration-100 hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">そば</button>
+            </div>
         </div>
 
         <div className="mb-5 flex flex-col sm:mb-8 sm:divide-y sm:border-t sm:border-b">
@@ -20,7 +30,7 @@ const Seed = () => {
 
               <div className="flex flex-1 flex-col justify-between">
                 <div>
-                  <a href="#" className="mb-1 inline-block text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">秋小麦</a>
+                  <a href="#" className="mb-1 inline-block text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">ゆめぴりか</a>
                   <span className="block text-gray-500">Size: 5ℓ</span>
                 </div>
 
@@ -98,7 +108,7 @@ const Seed = () => {
 
               <div className="flex flex-1 flex-col justify-between">
                 <div>
-                  <a href="#" className="mb-1 inline-block text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">パワーカイザー</a>
+                  <a href="#" className="mb-1 inline-block text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">ななつぼし</a>
                   <span className="block text-gray-500">Size: 5ℓ</span>
                 </div>
 
@@ -176,7 +186,7 @@ const Seed = () => {
 
               <div className="flex flex-1 flex-col justify-between">
                 <div>
-                  <a href="#" className="mb-1 inline-block text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">パワーカイザー</a>
+                  <a href="#" className="mb-1 inline-block text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">黒大豆</a>
                   <span className="block text-gray-500">Size: 5ℓ</span>
                 </div>
 

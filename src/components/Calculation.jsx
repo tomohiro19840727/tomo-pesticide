@@ -5,8 +5,7 @@ const Calculation = () => {
     <>
     <div class="bg-white py-6 sm:py-8 lg:py-12">
     <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <div class="flex overflow-hidden rounded-lg bg-gray-100">
-        
+      <div class="flex overflow-hidden rounded-lg bg-gray-100">       
         <div class="relative hidden bg-gray-200 sm:block sm:w-1/3 lg:w-1/2">
           <img src="https://images.unsplash.com/photo-1604076913837-52ab5629fba9?auto=format&q=75&fit=crop&w=750" loading="lazy" alt="Photo by mymind" class="absolute inset-0 h-full w-full object-cover object-center" />
         </div>

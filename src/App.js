@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Seed from './components/Seed';
 import Plant from './components/Plant';
 import Calculation from './components/Calculation';
+import Practice from './components/Practice';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/plant" element={<Plant />} />
             <Route path="/pesticide" element={<Pesticide />} />
             <Route path="/calculation" element={<Calculation />} />
+            <Route path="/practice" element={<Practice />} />
           </Routes>
       </Router>
     </>
