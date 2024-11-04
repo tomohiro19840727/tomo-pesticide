@@ -153,7 +153,7 @@ const Pesticide = () => {
               
               <div className="flex flex-1 flex-col justify-between">
                 <div>
-                  <a href="#" className="mb-1 inline-block text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">ラクサー</a>
+                  <a href="#" className="mb-1 inline-block text-lg font-bold text-gray-800 transition duration-100 hover:text-gray-500 lg:text-xl">ラクー</a>
                   <span className="block text-gray-500">Size: 5ℓ</span>
                 </div>
 
