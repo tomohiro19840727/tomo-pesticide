@@ -29,12 +29,8 @@ const Header = () => {
           </svg>
           Menu
         </button>
-      </header>
-
-     
+      </header>  
     </div>
-
-   
   </div>
   )
 }
