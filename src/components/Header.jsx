@@ -1,37 +1,72 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// ナビゲーションリンクの設定
+const NAV_LINKS = [
+  { to: '/', label: 'Home', isActive: true },
+  { to: '/pesticide', label: '農薬管理' },
+  { to: '/plant', label: '肥料管理' },
+  { to: '/seeds', label: '種子管理' },
+  { to: '/practice', label: '練習' },
+]
+
+// ロゴコンポーネント
+const Logo = () => (
+  <Link to="/" className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-5xl" aria-label="logo">
+    <svg width="95" height="94" viewBox="0 0 95 94" className="h-auto w-6 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M96 0V47L48 94H0V47L48 0H96Z" />
+    </svg>
+    FARM ひま栗城
+  </Link>
+)
+
+// ナビゲーションリンクコンポーネント
+const NavLink = ({ to, label, isActive }) => {
+  const baseClasses = 'text-lg font-semibold transition duration-100'
+  const activeClasses = isActive ? 'text-indigo-500' : 'text-gray-600 hover:text-indigo-500 active:text-indigo-700'
+  
+  return (
+    <Link to={to} className={`${baseClasses} ${activeClasses}`}>
+      {label}
+    </Link>
+  )
+}
+
+// メニューボタンコンポーネント
+const MobileMenuButton = () => (
+  <button 
+    type="button" 
+    className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden"
+    aria-label="メニューを開く"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+      <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+    </svg>
+    Menu
+  </button>
+)
+
 const Header = () => {
   return (
     <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
-    <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <header className="mb-4 flex items-center justify-between py-4 md:py-8">
-        <Link to="/" className="inline-flex items-center gap-2.5 text-2xl font-bold text-black md:text-5xl" aria-label="logo">
-          <svg width="95" height="94" viewBox="0 0 95 94" className="h-auto w-6 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M96 0V47L48 94H0V47L48 0H96Z" />
-          </svg>
-          FARM ひま栗城
-        </Link>
+      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <header className="mb-4 flex items-center justify-between py-4 md:py-8">
+          <Logo />
 
-        <nav className="hidden gap-12 lg:flex">
-          <Link to="/" className="text-lg font-semibold text-indigo-500">Home</Link>
-          <Link to="/pesticide" className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">農薬管理</Link>
-          <Link to="/plant" className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">肥料管理</Link>
-          <Link to="/seeds" className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">種子管理</Link>
-          <Link to="/practice" className="text-lg font-semibold text-gray-600 transition duration-100 hover:text-indigo-500 active:text-indigo-700">練習</Link>
-        </nav>
+          <nav className="hidden gap-12 lg:flex">
+            {NAV_LINKS.map((link) => (
+              <NavLink key={link.to} {...link} />
+            ))}
+          </nav>
 
-        <Link to="/contact" className="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block">Contact Sales</Link>
+          <Link to="/contact" className="hidden rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:inline-block">
+            Contact Sales
+          </Link>
 
-        <button type="button" className="inline-flex items-center gap-2 rounded-lg bg-gray-200 px-2.5 py-2 text-sm font-semibold text-gray-500 ring-indigo-300 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-            <path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
-          </svg>
-          Menu
-        </button>
-      </header>  
+          <MobileMenuButton />
+        </header>  
+      </div>
     </div>
-  </div>
   )
 }
 
