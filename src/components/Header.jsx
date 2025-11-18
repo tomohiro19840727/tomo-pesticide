@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom'
 // ナビゲーションリンクの設定
 const NAV_LINKS = [
   { to: '/', label: 'Home', isActive: true },
-  { to: '/pesticide', label: '農薬管理' },
-  { to: '/plant', label: '肥料管理' },
+  { to: '/pesticide', label: '農薬' },
+  { to: '/plant', label: '肥料' },
   { to: '/seeds', label: '種子管理' },
+  { to: '/storybook', label: 'ストーリー' },
   { to: '/practice', label: '練習' },
 ]
 

@@ -6,6 +6,7 @@ import Seed from './components/Seed';
 import Plant from './components/Plant';
 import Calculation from './components/Calculation';
 import Practice from './components/Practice';
+import StoryBook from './components/StoryBook';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
             <Route path="/pesticide" element={<Pesticide />} />
             <Route path="/calculation" element={<Calculation />} />
             <Route path="/practice" element={<Practice />} />
+            <Route path="/storybook" element={<StoryBook />} />
           </Routes>
       </Router>
     </>
