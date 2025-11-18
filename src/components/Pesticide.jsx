@@ -31,7 +31,7 @@ const Pesticide = () => {
       }
     };
     fetchQuantities();
-  }, []); // Runs 
+  }, []); 
 
   const handleIncrement = async () => {
     const newQuantity = quantity + 1;
@@ -123,7 +123,7 @@ const Pesticide = () => {
   };
 
   const handleUsedDecrement2 = () => {
-    if (used1 > 0) {
+    if (used2 > 0) {
       setUsed2(prevUsed => prevUsed - 1);
     }
   };
@@ -300,7 +300,7 @@ const Pesticide = () => {
                   </button>
                 </div>
                 
-                <span className="font-bold text-gray-800 md:text-lg">合計: ¥{(unitPrice * quantity).toLocaleString()}</span>
+                <span className="font-bold text-gray-800 md:text-lg">合計: ¥{(unitPrice1 * quantity1).toLocaleString()}</span>
               </div>
             </div>
           </div>
@@ -381,7 +381,7 @@ const Pesticide = () => {
                   </button>
                 </div>
                 
-                <span className="font-bold text-gray-800 md:text-lg">合計: ¥{(unitPrice * quantity).toLocaleString()}</span>
+                <span className="font-bold text-gray-800 md:text-lg">合計: ¥{(unitPrice2 * quantity2).toLocaleString()}</span>
               </div>
             </div>
           </div>
@@ -392,7 +392,7 @@ const Pesticide = () => {
           <div className="w-full rounded-lg bg-gray-100 p-4 sm:max-w-xs">
             <div className="flex items-start justify-between text-gray-800">
               <span className="text-lg font-bold">合計金額</span>
-              <span className="text-lg font-bold">¥{(unitPrice * quantity).toLocaleString()}</span>
+              <span className="text-lg font-bold">¥{((unitPrice * quantity) + (unitPrice1 * quantity1) + (unitPrice2 * quantity2)).toLocaleString()}</span>
             </div>
           </div>
           <button className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white transition duration-100 hover:bg-indigo-600 focus:ring-2 focus:ring-indigo-300 active:bg-indigo-700 md:text-base">

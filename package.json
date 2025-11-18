@@ -1,6 +1,7 @@
 {
   "name": "tomo-pesticide",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -18,12 +19,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006 --no-open",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -39,6 +43,13 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.13"
+    "@storybook/addon-docs": "^10.0.7",
+    "@storybook/preset-create-react-app": "^10.0.7",
+    "@storybook/react-webpack5": "^10.0.7",
+    "eslint-plugin-storybook": "^10.0.7",
+    "prop-types": "^15.8.1",
+    "storybook": "^10.0.7",
+    "tailwindcss": "^3.4.13",
+    "webpack": "^5.102.1"
   }
 }
